@@ -1,0 +1,17 @@
+{
+  "name": "Aziz-Anakin-links",
+  "short_name": "Aziz-Anakin-links",
+  "description": "Tous les liens d'Aziz Anakin : portfolio, GitHub et LinkedIn.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05060a",
+  "theme_color": "#00D98C",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "460x460",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

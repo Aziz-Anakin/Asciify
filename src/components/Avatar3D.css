@@ -1,0 +1,57 @@
+.avatar3d {
+  perspective: 700px;
+  display: inline-block;
+}
+
+.avatar3d__stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: avatar3d-orbit 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+.avatar3d__layer,
+.avatar3d__face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  backface-visibility: hidden;
+}
+
+/* Tranche de la pièce : vert néon qui s'assombrit vers l'arrière */
+.avatar3d__layer {
+  background: #00a86b;
+  box-shadow: inset 0 0 0 1px rgba(0, 217, 140, 0.6);
+}
+
+.avatar3d__layer:first-child {
+  background: #013d29;
+  box-shadow: 0 18px 32px rgba(0, 217, 140, 0.35);
+}
+
+.avatar3d__face {
+  object-fit: cover;
+  transform: translateZ(0.6px);
+  box-shadow: 0 0 0 2px rgba(0, 217, 140, 0.85), 0 0 18px rgba(0, 217, 140, 0.45);
+  user-select: none;
+}
+
+@keyframes avatar3d-orbit {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(6deg) rotateY(-24deg);
+  }
+  25% {
+    transform: translateY(-4px) rotateX(-4deg) rotateY(-6deg);
+  }
+  50% {
+    transform: translateY(0) rotateX(-6deg) rotateY(24deg);
+  }
+  75% {
+    transform: translateY(4px) rotateX(4deg) rotateY(6deg);
+  }
+}
